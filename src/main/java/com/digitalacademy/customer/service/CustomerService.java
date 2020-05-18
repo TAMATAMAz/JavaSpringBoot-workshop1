@@ -38,7 +38,7 @@ public class CustomerService {
     //edit data
     public Customer updateCustomer(Long id,Customer customerReq){
         return customerRepository.findAllById(id) != null ?
-                customerRepository.save(customerReq) : null;
+                customerRepository.save(customerReq):null;
     }
 
     public boolean deleteById(Long id){
@@ -47,8 +47,6 @@ public class CustomerService {
             return true;
         } catch (EmptyResultDataAccessException e){
             return false;
-        } finally {
-            //ใส่ก้อได้ไม่ใส่ก้อได้เป้นการ force ทำ
         }
     }
 }
